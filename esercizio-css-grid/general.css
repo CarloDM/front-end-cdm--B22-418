@@ -84,6 +84,7 @@ ul ,li , a{
 /* ------------------------------ */
 
 .my-c-container{
+
     min-height: 15px;
     padding: 0.6rem
 }
@@ -112,10 +113,12 @@ ul ,li , a{
     grid-area: jumbotron;
     grid-template-rows: auto auto auto;
     display: grid;
+    text-align: center;
     /* height: 300px; */
  }
 .categorie { 
-    grid-area: categorie; 
+    grid-area: categorie;
+
 }
 .my-main { 
     grid-area: main;
