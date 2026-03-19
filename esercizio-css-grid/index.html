@@ -3,9 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="general.css">
+  <title>esercizio</title>
 </head>
-<body>
-  
-</body>
+
+  <body>
+
+    <!-- 
+    Realizza la pagina web mostrata negli screenshot desktop e mobile utilizzando HTML e CSS.
+
+    1. IMPOSTAZIONE DELLE VARIABILI CSS
+    
+    Crea le variabili CSS necessarie per gestire colori, bordi e border radius, seguenquesta logica:
+    - Colore di background della pagina: #f5f7fb;
+    - Colore di background delle card: #f9fafb;
+    - Colore del testo: #1f2937;
+    - Colore primario: #2563eb;
+    - Colore primario light: #dbeafe;
+    - Colore primario lighter: #eff6ff;
+    - Bordo: 1px solid #e5e7eb;
+    - Border radius sm: 10px;
+    - Border radius: 12px;
+    - Border radius lg: 16px;
+    
+    Le variabili dovranno poi essere riutilizzate nel resto del CSS, evitando di scriverevalori direttamente ogni volta.
+    
+    2. LAYOUT PRINCIPALE CON CSS GRID
+    
+    La struttura principale della pagina deve essere realizzata con CSS Grid:
+    - utilizza grid-template-areas per definire le aree del layout di pagina;
+    - assegna a ogni sezione la propria area tramite grid-area;
+    - il layout deve essere responsive, quindi deve adattarsi correttamente alla versiomobile mostrata nello screenshot.
+    
+    3. SEZIONI INTERNE CON CSS GRID
+    
+    Anche alcune sezioni interne devono essere costruite con CSS Grid:
+    - la sezione Corsi deve usare Grid per disporre le card;
+    - la sezione Reviews deve usare Grid per disporre le recensioni.
+    Queste griglie interne devono adattarsi in modo corretto tra desktop e mobile.
+    
+    4. HTML SEMANTICO
+    
+    Usa, dove possibile, tag HTML semantici appropriati, ad esempio:
+    - header
+    - main
+    - section
+    - aside
+    - footer
+    - nav
+    
+    5. RESPONSIVE
+    
+    La pagina deve avere:
+    - una versione desktop coerente con lo screenshot fornito;
+    - una versione mobile coerente con lo screenshot fornito.
+    - Per il responsive puoi usare una o più media query.
+    -->
+
+    <div class="main-wrapper">
+
+      <div class="my-container-grid ">
+
+        <header class="my-c-container my-header"> header
+
+        </header>
+        <section class="my-c-container my-jumbotron ">jumbo
+
+        </section>
+        <aside class="my-c-container categorie ">categorie
+
+        </aside>
+        <main class="my-c-container my-main debug2">
+            Main
+            <article class="nostri-corsi">main art</article>
+            <article class="dicono-di-noi">main art 2</article>
+
+        </main>
+        <section class="my-c-container my-cta">cta
+
+        </section>
+        <footer class="my-c-container my-footer">footer
+
+        </footer>
+        
+      </div>
+
+
+    </div>
+
+  </body>
+
 </html>
