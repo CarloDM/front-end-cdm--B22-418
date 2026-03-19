@@ -90,6 +90,8 @@ ul ,li , a{
 }
 
 .my-container-grid {
+    max-width: 1080px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr; 
     grid-template-rows: auto;
@@ -122,12 +124,15 @@ ul ,li , a{
 }
 .my-main { 
     grid-area: main;
+    min-height: 150px;
  }
 .my-cta { 
     grid-area: cta;
+    min-height: 230px;
  }
 .my-footer { 
     grid-area: footer;
+    min-height: 200px;
  }
 
 @media (min-width: 768px) {
