@@ -17,7 +17,7 @@
 }
 
 .debug0{
-    background: rgba(148, 147, 147, 0.234);
+    background: rgba(0, 0, 0, 0.234);
 }
 .debug1{
     background: rgba(234, 11, 11, 0.234);
@@ -82,7 +82,15 @@ ul ,li , a{
     text-decoration: none;
 }
 /* ------------------------------ */
-
+.br5{
+    border-radius: 10px;
+}
+.p6{
+    padding: 0.7rem !important;
+}
+.p12{
+    padding: 1.4rem !important;
+}
 .my-c-container{
 
     min-height: 15px;
