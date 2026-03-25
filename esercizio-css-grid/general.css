@@ -61,6 +61,7 @@ h1 {
     line-height: 1.15;
     margin-bottom: .9rem;
 }
+
 .h1-logo{
     font-size: 1.4em;
 }
@@ -87,6 +88,7 @@ ul ,li , a{
     list-style: none;
     text-decoration: none;
 }
+
 /* ------------------------------ */
 .br5{
     border-radius: 10px;
@@ -149,7 +151,7 @@ ul ,li , a{
     display: grid;
     text-align: center;
     /* height: 300px; */
- }
+}
 .categorie { 
     grid-area: categorie;
     padding: 2px;
@@ -163,15 +165,15 @@ ul ,li , a{
 .my-main { 
     grid-area: main;
     min-height: 150px;
- }
+}
 .my-cta { 
     grid-area: cta;
     min-height: 230px;
- }
+}
 .my-footer { 
     grid-area: footer;
     min-height: 200px;
- }
+}
 
 @media (min-width: 768px) {
     .my-container-grid {
@@ -189,7 +191,10 @@ ul ,li , a{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
+    }   
+
+
+
 
 }
 
