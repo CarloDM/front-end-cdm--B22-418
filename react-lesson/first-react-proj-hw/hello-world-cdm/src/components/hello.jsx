@@ -1,3 +1,6 @@
+import ItemHello from "./hello/ItemHello";
+
+
 // Componente funzionale base
 function Hello() {
 
@@ -25,6 +28,8 @@ function Hello() {
       </button>
 
       <p>Aggiungere componente a componente</p>
+
+      <ItemHello />
 
     </header>
   );
