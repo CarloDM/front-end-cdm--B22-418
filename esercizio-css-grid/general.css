@@ -61,6 +61,7 @@ h1 {
     line-height: 1.15;
     margin-bottom: .9rem;
 }
+
 .h1-logo{
     font-size: 1.4em;
 }
@@ -87,6 +88,7 @@ ul ,li , a{
     list-style: none;
     text-decoration: none;
 }
+
 /* ------------------------------ */
 .br5{
     border-radius: 10px;
@@ -189,7 +191,15 @@ ul ,li , a{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+<<<<<<< HEAD
     }
+=======
+    }   
+
+
+
+
+>>>>>>> d664502a609fb79ef3e70078cdb88bff771f41ae
 }
 
 
