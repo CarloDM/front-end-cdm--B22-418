@@ -116,7 +116,6 @@ ul ,li , a{
 }
 
 .my-c-container{
-
     min-height: 15px;
     padding: 0.6rem
 }
@@ -125,6 +124,7 @@ ul ,li , a{
     max-width: 1080px;
     margin: auto;
     display: grid;
+    
     grid-template-columns: 1fr; 
     grid-template-rows: auto;
     grid-template-areas:"header"
@@ -149,7 +149,7 @@ ul ,li , a{
     display: grid;
     text-align: center;
     /* height: 300px; */
- }
+}
 .categorie { 
     grid-area: categorie;
     padding: 2px;
@@ -163,15 +163,15 @@ ul ,li , a{
 .my-main { 
     grid-area: main;
     min-height: 150px;
- }
+}
 .my-cta { 
     grid-area: cta;
     min-height: 230px;
- }
+}
 .my-footer { 
     grid-area: footer;
     min-height: 200px;
- }
+}
 
 @media (min-width: 768px) {
     .my-container-grid {
@@ -183,14 +183,13 @@ ul ,li , a{
                             "categorie main"
                             "cta cta"
                             "footer footer"
-        }
+    }
 
     .my-header { 
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
+    }
 }
 
 
