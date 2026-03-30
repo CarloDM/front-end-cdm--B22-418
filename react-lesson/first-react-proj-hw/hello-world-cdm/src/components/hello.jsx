@@ -22,7 +22,7 @@ function Hello() {
           ciao {nome};
 
           <code>
-            onClick=() = console.log(ciao + nome)
+              onClick=() = console.log(ciao + nome)
           </code>
 
       </button>
