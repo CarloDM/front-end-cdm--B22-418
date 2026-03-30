@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";  
-import POKEMON_NAME_LIST from "../js/pokemonNameList"
-import myMath from "../js/mathFunction"
-import PokeSellCard from "./ui/PokeSellCard";
-import axios from "axios";
+import POKEMON_NAME_LIST       from "../js/pokemonNameList"
+import myMath                  from "../js/mathFunction"
+import PokeSellCard            from "./ui/PokeSellCard";
+import axios                   from "axios";
 
 //  esercizio
 //  lista prodotti lista prezzo dei prodotti pokemon
@@ -28,18 +28,17 @@ function PokeStore() {
 
     // logga(pokeInfo)
 
-
   return (
     <>
       {/* <img className="pokeCard" src={ pokeInfo?.sprites.other.dream_world.front_default } alt="" />  */}
       {/* <img className="pokeCard" src={ pokeInfo?.sprites.other.showdown.front_default } alt="" /> */}
 
       <PokeSellCard
-        nome=   { pokeInfo?.nome }
-        id=     { pokeInfo?.id }
+        nome=      { pokeInfo?.nome }
+        id=        { pokeInfo?.id }
         punteggio= { pokeInfo?.score }
-        // prezzo= { FASCEPREZZI[myMath.randomBetween(0, FASCEPREZZI.length - 1)] }
-        imgUrl= { pokeInfo?.imgUrlSvg }
+        peso=      { pokeInfo?.weight }
+        imgUrl=    { pokeInfo?.imgUrlSvg }
       />
 
       <button
@@ -100,11 +99,11 @@ function pokemonInfoGenerate(setPokeInfo){
 function scoreGen(p){
 
     //score formula = hp + attak + defence + speed + (weight / 10)
-    const score =  p.hp * 0.15 + 
-                  (p.attak + p.specialAttack) * 0.2 +
+    const score =  p.hp                          * 0.15 + 
+                  (p.attak + p.specialAttack)    * 0.2 +
                   (p.defense + p.specialDefence) * 0.2 +
-                   p.speed * 0.1 +
-                  (p.weight / 10) * 0.1 ;
+                   p.speed                       * 0.1 +
+                  (p.weight / 10)                * 0.075 ;
     
     console.log('score: ' + score);
     
@@ -112,7 +111,7 @@ function scoreGen(p){
   return score;
 }
 
-function logga (param) {
+function myLog (param) {
   console.log('logga:::::' ,  param)
 }
 

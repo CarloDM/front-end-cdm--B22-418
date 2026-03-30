@@ -191,7 +191,7 @@
   background: rgb(77, 77, 77);
   padding-bottom: 1.5em;
   border-bottom: 1px solid white;
-  box-shadow: inset 0px -0px 0.24em white ;
+  box-shadow: inset 0px 0px 0.24em white ;
 
   & p , h1, button{
     color: rgb(207, 207, 207);
@@ -199,6 +199,8 @@
 }
 
 .pokeCard{
-  margin: 3rem auto;
-  height: 250px;
+  margin:     3rem auto;
+  max-width:  500px;
+  height: 350px;
+  background: rgba(106, 80, 80, 0.194);
 }
