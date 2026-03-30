@@ -1,4 +1,29 @@
 import ItemHello from "./hello/ItemHello";
+import axios from "axios";
+import POKEMON_NAME_LIST from "../js/pokemonNameList"
+
+import myMath from "../js/mathFunction"
+
+const TESTA = 'stringa test';
+let chiamata = {};
+
+
+
+console.log(POKEMON_NAME_LIST.POKEMON_NAME_LIST.length)
+console.log(myMath.randomBetween(0, 1300))
+
+  await axios.get('https://pokeapi.co/api/v2/pokemon/' + 3)
+  .then(response => {
+
+    chiamata = response.data;
+
+    console.log(chiamata);
+    console.log(chiamata.sprites.other );
+
+  })
+  .catch(error =>{
+    console.log(error);
+  });
 
 
 // Componente funzionale base
@@ -8,9 +33,13 @@ function Hello() {
   const nome = "Utente";
 
   return (
+
     <header className="hello-box">
 
+      <img src={ chiamata.sprites.other.dream_world.front_default } alt="" />
+
       <h1>Ciao, {nome} 👋</h1>
+      <p>{TESTA}</p>
       <p>Prima componente React funzionante.</p>
 
 
@@ -21,8 +50,8 @@ function Hello() {
 
           ciao {nome};
 
-          <code>
-              onClick=() = console.log(ciao + nome)
+          <code>  
+            onClick=() = console.log(ciao + nome)
           </code>
 
       </button>
@@ -32,6 +61,8 @@ function Hello() {
       <ItemHello />
 
     </header>
+
+
   );
 }
 
