@@ -1,4 +1,4 @@
-function PokeSellCard({ nome, id, prezzo, imgUrl  }) {
+function PokeSellCard({ nome, id, punteggio, imgUrl }) {
   return (
         <>
 
@@ -6,7 +6,7 @@ function PokeSellCard({ nome, id, prezzo, imgUrl  }) {
 
               <p>{nome}</p>
               <p>id : {id}</p>
-              <p>prezzo: {prezzo}</p>
+              <p>punteggio: {punteggio}</p>
               {/* mantenere */}
               <img className="pokeCard" src={ imgUrl } alt="" /> 
               {/* <img className="pokeCard" src={ pokeInfo?.sprites.other.showdown.front_default } alt="" /> */}

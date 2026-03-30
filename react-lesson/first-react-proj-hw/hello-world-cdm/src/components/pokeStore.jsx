@@ -8,11 +8,11 @@ import axios from "axios";
 //  lista prodotti lista prezzo dei prodotti pokemon
 //  creare popolare uno scontrino con id per ogni prodotto
 //  subtotale e totale con l iva a 22%
-//  calcolare il totale dei prezzi
+//  calcolare il totale dei PREZZI
 
-// sotto 60 leggeri ; sotto 90 normali; sotto 110 forti; sotto 130 rari; sopra 130 speciali;
+// sotto 50 leggeri ; sotto 90 normali; sotto 110 forti; sotto 130 rari; sopra 130 speciali;
 
-const PREZZI = [12.3 , 22, 46, 11.99, 7.49, 33, 55, 55.89, 99.90];
+const FASCEPREZZI = [20, 40, 80, 160, 320];
 
 
 function PokeStore() {
@@ -23,9 +23,10 @@ function PokeStore() {
     useEffect(() => {
 
       pokemonInfoGenerate(setPokeInfo)
-
-
+      
     }, []);
+
+    // logga(pokeInfo)
 
 
   return (
@@ -34,10 +35,11 @@ function PokeStore() {
       {/* <img className="pokeCard" src={ pokeInfo?.sprites.other.showdown.front_default } alt="" /> */}
 
       <PokeSellCard
-        nome=   { pokeInfo?.name }
+        nome=   { pokeInfo?.nome }
         id=     { pokeInfo?.id }
-        prezzo= { PREZZI[myMath.randomBetween(0, PREZZI.length - 1)] }
-        imgUrl= { pokeInfo?.sprites.other.dream_world.front_default }
+        punteggio= { pokeInfo?.score }
+        // prezzo= { FASCEPREZZI[myMath.randomBetween(0, FASCEPREZZI.length - 1)] }
+        imgUrl= { pokeInfo?.imgUrlSvg }
       />
 
       <button
@@ -51,6 +53,7 @@ function PokeStore() {
 function pokemonInfoGenerate(setPokeInfo){
 
   let poke = {
+    nome: null,
     id: null,
     hp : null,
     attak : null,
@@ -60,6 +63,7 @@ function pokemonInfoGenerate(setPokeInfo){
     speed : null,
     weight : null,
 
+    imgUrlSvg : null,
     score: null
   };
   
@@ -69,7 +73,7 @@ function pokemonInfoGenerate(setPokeInfo){
         
         const data = await callPokemonInfo(myMath.randomBetween(0, POKEMON_NAME_LIST.POKEMON_NAME_LIST.length - 1));
         //scrive
-
+        poke.nome =           data.name
         poke.id =             data.id
         poke.hp =             data.stats[0].base_stat
         poke.attak =          data.stats[1].base_stat
@@ -78,9 +82,11 @@ function pokemonInfoGenerate(setPokeInfo){
         poke.specialDefence = data.stats[4].base_stat
         poke.speed =          data.stats[5].base_stat
         poke.weight =         data.weight
+        poke.imgUrlSvg =      data.sprites.other.dream_world.front_default
+
         poke.score = scoreGen(poke);
-        
-        setPokeInfo(data);    
+
+        setPokeInfo(poke);    
         console.log("poke obj", poke);
 
       } catch (error) {
@@ -106,6 +112,10 @@ function scoreGen(p){
   return score;
 }
 
+function logga (param) {
+  console.log('logga:::::' ,  param)
+}
+
 async function callPokemonInfo(id) {
 
   const response = await axios.get(
@@ -114,10 +124,6 @@ async function callPokemonInfo(id) {
 
   return response.data;
 
-}
-
-function test() {
-  console.log('click test')
 }
 
 export default PokeStore;
